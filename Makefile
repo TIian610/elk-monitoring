@@ -5,13 +5,16 @@ build: app
 	@ docker-compose build
 
 up:
+	@ docker-compose up
+
+up-d:
 	@ docker-compose up -d && sleep 5
 
 show:
 	@ docker-compose ps
 
 down:
-	@ docker-compose stop
+	@ docker-compose stop && sleep 5
 
 delete:
 	@ docker-compose rm -fsv
@@ -22,4 +25,4 @@ init-kibana:
 	    -H 'kbn-version: 6.3.2' \
 	    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
 
-init: delete build up init-kibana
+init: delete build up-d init-kibana down
