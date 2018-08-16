@@ -1,9 +1,0 @@
-filebeat:
-  prospectors:
-    -
-      paths:
-        - /logs/*.log
-      input_type: log
-output:
-  logstash:
-    hosts: ["logstash:5500"]
