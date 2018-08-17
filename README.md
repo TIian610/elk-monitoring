@@ -39,6 +39,7 @@ Give Kibana a few seconds to initialize, then access the Kibana web UI by hittin
 
 By default, the stack exposes the following ports:
 * 5000: Logstash TCP input.
+* 9600: Logstash HTTP healthy check
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
