@@ -1,10 +1,10 @@
 #!/bin/bash
 
 until curl 'http://logstash:9600' 2> /dev/null; do
-  printf "Waiting for logtash..."
+  echo "Waiting for logtash..."
   sleep 1;
 done
 
-printf "\nStarting...\n"
+echo "Starting..."
 
 ./bin/logs-generator

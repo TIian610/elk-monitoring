@@ -11,7 +11,7 @@ This is not for production, it is to test the integration.
 ### Getting started
 
 ```
-make build up-d
+make build up-d init-kibana
 ```
 
 ### Commands

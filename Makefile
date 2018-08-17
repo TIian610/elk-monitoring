@@ -8,7 +8,7 @@ up:
 	@ docker-compose up
 
 up-d:
-	@ docker-compose up -d && sleep 6
+	@ docker-compose up -d && sleep 10
 
 show:
 	@ docker-compose ps
@@ -23,4 +23,4 @@ init-kibana:
 	@ curl -XPOST -D- 'http://localhost:5601/api/saved_objects/index-pattern' \
 	    -H 'Content-Type: application/json' \
 	    -H 'kbn-version: 6.3.2' \
-	    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
+	    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}' && printf "\n"
