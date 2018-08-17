@@ -1,6 +1,6 @@
 # ELK Monitorig
 
-This is a project to learn how to monitor applications with elk.
+This is a project to learn how to monitor applications with ELK.
 This is not for production, it is to test the integration.
 
 ### Links
