@@ -19,7 +19,7 @@ public class LogTask extends TimerTask {
 
     @Override
     public void run() {
-        log.log(getRandomLevel(), "type=request");
+        log.log(getRandomLevel(), "addingNewLog");
     }
 
     private Level getRandomLevel() {

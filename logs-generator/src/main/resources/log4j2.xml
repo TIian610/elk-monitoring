@@ -2,10 +2,10 @@
 <Configuration status="WARN">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss,SSSZ} level=%p class=%c{1} %m%n"/>
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss,SSSZ} %p %c{1} %m%n"/>
         </Console>
         <Socket name="Socket" host="logstash" port="5000">
-            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss,SSSZ} level=%p class=%c{1} %m%n"/>
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss,SSSZ} %p %c{1} %m%n"/>
         </Socket>
     </Appenders>
     <Loggers>

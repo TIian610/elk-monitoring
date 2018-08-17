@@ -11,7 +11,7 @@ This is not for production, it is to test the integration.
 ### Getting started
 
 ```
-make init up
+make build up-d
 ```
 
 ### Commands
@@ -22,13 +22,15 @@ make init up
 
 `make up-d` runs daemon compose
 
-`make down` stops the application
+`make down` stops the ELK
 
 `make delete` deletes containers
 
-`make show` shows the current containers (needs `up`)
+`make show` shows the current containers
 
-`make init` starts the configuration
+`make init-kibana` starts the kibana configuration
+
+`make app` compiles the application
 
 ### ELK Information
 

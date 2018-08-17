@@ -8,13 +8,13 @@ up:
 	@ docker-compose up
 
 up-d:
-	@ docker-compose up -d && sleep 5
+	@ docker-compose up -d && sleep 6
 
 show:
 	@ docker-compose ps
 
 down:
-	@ docker-compose stop && sleep 5
+	@ docker-compose stop && sleep 2
 
 delete:
 	@ docker-compose rm -fsv
@@ -24,5 +24,3 @@ init-kibana:
 	    -H 'Content-Type: application/json' \
 	    -H 'kbn-version: 6.3.2' \
 	    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
-
-init: delete build up-d init-kibana down
