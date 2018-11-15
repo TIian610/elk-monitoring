@@ -7,11 +7,12 @@ This is not for production, it is to test the integration.
 
 - Project Base [https://github.com/deviantony/docker-elk](https://github.com/deviantony/docker-elk)
 - ELK Stack [https://www.elastic.co/elk-stack](https://www.elastic.co/elk-stack)
+- ELK Docker [https://www.docker.elastic.co/](https://www.docker.elastic.co/)
 
 ### Getting started
 
 ```
-make build up-d init-kibana
+make build upd init
 ```
 
 ### Commands
@@ -20,7 +21,7 @@ make build up-d init-kibana
 
 `make up` runs compose
 
-`make up-d` runs daemon compose
+`make upd` runs daemon compose
 
 `make down` stops the ELK
 
@@ -28,7 +29,7 @@ make build up-d init-kibana
 
 `make show` shows the current containers
 
-`make init-kibana` starts the kibana configuration
+`make init` starts the kibana configuration
 
 `make app` compiles the application
 

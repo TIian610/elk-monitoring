@@ -1,5 +1,5 @@
-# https://github.com/elastic/logstash-docker
-FROM docker.elastic.co/logstash/logstash-oss:6.3.2
-
-# Add your logstash plugins setup here
-# Example: RUN logstash-plugin install logstash-filter-json
+ARG ELK_VERSION
+FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
+COPY config/logstash.yml /usr/share/logstash/config/logstash.yml
+COPY pipeline/logstash.conf /usr/share/logstash/pipeline/logstash.conf
+# RUN logstash-plugin install plugin
