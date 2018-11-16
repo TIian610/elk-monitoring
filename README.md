@@ -1,7 +1,7 @@
 # ELK Monitorig
 
 This is a project to learn how to monitor applications with ELK.
-This is not for production, it is to test the integration.
+This is not for production, it's just to test the integration.
 
 ### Links
 
@@ -12,7 +12,7 @@ This is not for production, it is to test the integration.
 ### Getting started
 
 ```
-make build upd init
+make build upd
 ```
 
 ### Commands
@@ -28,8 +28,6 @@ make build upd init
 `make delete` deletes containers
 
 `make show` shows the current containers
-
-`make init` starts the kibana configuration
 
 `make app` compiles the application
 
