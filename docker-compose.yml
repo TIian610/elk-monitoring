@@ -8,7 +8,6 @@ services:
         ELK_VERSION: $ELK_VERSION
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
-    restart: always
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
 
@@ -19,7 +18,6 @@ services:
         ELK_VERSION: $ELK_VERSION
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
-    restart: always
     depends_on:
       - elasticsearch
 
@@ -28,7 +26,6 @@ services:
       context: kibana/
       args:
         ELK_VERSION: $ELK_VERSION
-    restart: always
     ports:
       - 5601:5601
     depends_on:
@@ -39,7 +36,6 @@ services:
       context: logs-generator/
     environment:
       ELK_VERSION: $ELK_VERSION
-    restart: always
     depends_on:
       - logstash
 
