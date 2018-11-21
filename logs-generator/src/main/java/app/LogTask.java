@@ -8,14 +8,14 @@ import org.apache.logging.log4j.Logger;
 
 public class LogTask extends TimerTask {
 
-	private static final String SUCCESS = "Success";
-	private static final String FAIL = "Fail";
 	private static final int PROBABILITY = 90;
-	public static final String MESSAGE_INFO = "complete={} service={} status={} response='{}' duration={}";
-	public static final String MESSAGE_ERROR = "complete={} service={} status={} code={} response='{}' duration={}";
+	private static final String FAIL = "Fail";
+	private static final String SUCCESS = "Success";
+	private static final String MESSAGE_INFO = "complete={} service={} status={} response='{}' duration={}";
+	private static final String MESSAGE_ERROR = "complete={} service={} status={} code={} response='{}' duration={}";
 
-	public final Logger log = LogManager.getLogger(LogTask.class);
-	public final Random random = new Random();
+	private static final Logger log = LogManager.getLogger(LogTask.class);
+	private static final Random random = new Random();
 
 	@Override
 	public void run() {
