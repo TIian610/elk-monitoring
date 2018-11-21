@@ -15,9 +15,7 @@ public class LogTask extends TimerTask {
 
 	public final Logger log = LogManager.getLogger(LogTask.class);
 	public final Random random = new Random();
-	
-	public final List<String> errors = Arrays.asList("400:A001:Bad request", "500:B002:Exception null pointer exeption",
-			"403:C050:Unauthorized token", "500:B003:Dependent records not completed");
+
 	public final List<String> success = Arrays.asList("200:Operation success", "201:Saved record",
 			"204:Operation success", "404:Not found");
 
@@ -31,8 +29,8 @@ public class LogTask extends TimerTask {
 			String[] info = success.get(random.nextInt(success.size())).split(":");
 			log.info(MESSAGE_INFO, "success", service.toString(), info[0], info[1], String.format("%.2f", duration));
 		} else {
-			String[] error = errors.get(random.nextInt(errors.size())).split(":");
-			log.error(MESSAGE_ERROR, "fail", service, error[0], error[1], error[2], String.format("%.2f", duration));
+			Error error = Error.getRandom();
+			log.error(MESSAGE_ERROR, "fail", service, error.getStatus(), error.getCode(), error.getMessage(), String.format("%.2f", duration));
 		}
 	}
 
