@@ -16,9 +16,6 @@ public class LogTask extends TimerTask {
 	public final Logger log = LogManager.getLogger(LogTask.class);
 	public final Random random = new Random();
 
-	public final List<String> success = Arrays.asList("200:Operation success", "201:Saved record",
-			"204:Operation success", "404:Not found");
-
 	@Override
 	public void run() {
 		Service service = Service.getRandom();
@@ -26,8 +23,8 @@ public class LogTask extends TimerTask {
 		double duration = 3. * random.nextDouble();
 
 		if (rand < 90) {
-			String[] info = success.get(random.nextInt(success.size())).split(":");
-			log.info(MESSAGE_INFO, "success", service.toString(), info[0], info[1], String.format("%.2f", duration));
+			Success success = Success.getRandom();
+			log.info(MESSAGE_INFO, "success", service.toString(), success.getStatus(), success.getMessage(), String.format("%.2f", duration));
 		} else {
 			Error error = Error.getRandom();
 			log.error(MESSAGE_ERROR, "fail", service, error.getStatus(), error.getCode(), error.getMessage(), String.format("%.2f", duration));

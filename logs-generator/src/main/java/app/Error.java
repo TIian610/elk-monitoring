@@ -9,6 +9,10 @@ public enum Error {
 	UNAUTHORIZED_TOKEN("Unauthorized token", "C050", 403), 
 	NOT_COMPLETED("Records not completed", "B003", 500);
 
+	private static final Error[] VALUES = values();
+	private static final int SIZE = VALUES.length;
+	private static final Random RANDOM = new Random();
+	
 	private String message;
 	private String code;
 	private int status;
@@ -31,17 +35,13 @@ public enum Error {
 		return status;
 	}
 
-	private static final Error[] VALUES = values();
-	private static final int SIZE = VALUES.length;
-	private static final Random RANDOM = new Random();
+	public static Error getRandom() {
+		return VALUES[RANDOM.nextInt(SIZE)];
+	}
 
 	@Override
 	public String toString() {
 		return message;
-	}
-
-	public static Error getRandom() {
-		return VALUES[RANDOM.nextInt(SIZE)];
 	}
 
 }
