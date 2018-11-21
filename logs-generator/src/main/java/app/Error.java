@@ -6,7 +6,8 @@ public enum Error {
 	BAD_REQUEST("Bad request", "A001", 400),
 	NULL_POINTER_EXCEPTION("Null pointer exception", "B002", 500),
 	UNAUTHORIZED_TOKEN("Unauthorized token", "C050", 403),
-	NOT_COMPLETED("Records not completed", "B003", 500);
+	NOT_COMPLETED("Records not completed", "B003", 500),
+	UNKNOWN("Unknown: \\\"I\\\'m sorry, I don\\\'t know what happened\\\"", "X010", 500);
 
 	private static final Error[] VALUES = values();
 	private static final int SIZE = VALUES.length;

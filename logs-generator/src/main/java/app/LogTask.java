@@ -8,7 +8,8 @@ import org.apache.logging.log4j.Logger;
 
 public class LogTask extends TimerTask {
 
-	private static final int PROBABILITY = 90;
+	private static final int MAX_PROBABILITY = 100;
+	private static final int PROBABILITY = 80;
 	private static final String FAIL = "Fail";
 	private static final String SUCCESS = "Success";
 	private static final String MESSAGE_INFO = "complete={} service={} status={} response='{}' duration={}";
@@ -27,7 +28,7 @@ public class LogTask extends TimerTask {
 	}
 
 	private boolean isInfo() {
-		return random.nextInt(100) < PROBABILITY;
+		return random.nextInt(MAX_PROBABILITY) < PROBABILITY;
 	}
 
 	private void logError() {
