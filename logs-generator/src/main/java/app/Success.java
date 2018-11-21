@@ -3,7 +3,6 @@ package app;
 import java.util.Random;
 
 public enum Success {
-
 	OPERATION_SUCCESS("Operation success", 200),
 	SAVED_RECORD("Saved record", 201),
 	OPERATION_SUCCESS_EMPTY("Operation success", 204),
@@ -33,9 +32,12 @@ public enum Success {
 		return VALUES[RANDOM.nextInt(SIZE)];
 	}
 
+	public String getDuration() {
+		return String.format("%.2f", 2. * RANDOM.nextDouble());
+	}
+
 	@Override
 	public String toString() {
 		return message;
 	}
-
 }
