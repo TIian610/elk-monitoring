@@ -3,6 +3,9 @@
 This is a project to learn how to monitor applications with ELK.
 This is not for production, it's just to test the integration.
 
+
+Dashboard Example: [dashboard-example](dashboard-example)
+
 ### Links
 
 - Project Base [https://github.com/deviantony/docker-elk](https://github.com/deviantony/docker-elk)
@@ -12,7 +15,7 @@ This is not for production, it's just to test the integration.
 ### Getting started
 
 ```
-make build upd
+make upd
 ```
 
 ### Commands

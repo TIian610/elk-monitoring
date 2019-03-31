@@ -7,10 +7,10 @@ app:
 build: app
 	@ docker-compose build
 
-up:
+up: build
 	@ docker-compose up
 
-upd:
+upd: build
 	@ docker-compose up -d
 
 show:
