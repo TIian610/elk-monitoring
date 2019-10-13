@@ -3,8 +3,7 @@
 This is a project to learn how to monitor applications with ELK.
 This is not for production, it's just to test the integration.
 
-
-Dashboard Example: [dashboard-example](dashboard-example)
+Dashboard Example: [dashboard-example](dashboard-example), import it into the saved objects option.
 
 ### Links
 
@@ -12,25 +11,15 @@ Dashboard Example: [dashboard-example](dashboard-example)
 - ELK Stack [https://www.elastic.co/elk-stack](https://www.elastic.co/elk-stack)
 - ELK Docker [https://www.docker.elastic.co/](https://www.docker.elastic.co/)
 
-### Getting started
-
-```
-make upd
-```
-
 ### Commands
 
-`make build` creates containers
+`make show` shows containers info
 
-`make up` runs compose
+`make run` runs compose
 
-`make upd` runs daemon compose
+`make stop` stops the ELK
 
-`make down` stops the ELK
-
-`make delete` deletes containers
-
-`make show` shows the current containers
+`make remove` deletes containers
 
 `make app` compiles the application
 
