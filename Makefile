@@ -3,22 +3,17 @@ export
 
 app:
 	@ cd logs-generator && ./gradlew clean install -q
+	@ cd logs-generator && docker build -t logs-generator .
 
-build: app
-	@ docker-compose build
-
-up: build
-	@ docker-compose up
-
-upd: build
-	@ docker-compose up -d
+run: app
+	@ docker stack deploy -c docker-stack.yml elk
 
 show:
-	@ docker-compose ps
+	@ docker stack services elk
 
-down:
-	@ docker-compose stop
+stop:
+	@ docker stack rm elk || true
 
-delete:
-	@ docker-compose rm -fsv
-	@ docker volume rm -f elk-monitoring_elasticsearch_data
+remove: stop
+	@ docker volume rm -f elk_elasticsearch_data || true
+	@ docker image rm logs-generator || true
