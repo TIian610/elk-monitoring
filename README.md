@@ -42,4 +42,4 @@ Default login:
 - user: `elastic`
 - password: `elastic`
 
-See [license settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/license-settings.html);
+See [license settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/license-settings.html).
