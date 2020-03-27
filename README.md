@@ -34,3 +34,12 @@ By default, the stack exposes the following ports:
 * 9200: Elasticsearch HTTP
 * 9300: Elasticsearch TCP transport
 * 5601: Kibana
+
+### Login
+
+Default login:
+
+- user: `elastic`
+- password: `elastic`
+
+See [license settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/license-settings.html);

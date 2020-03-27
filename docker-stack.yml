@@ -6,6 +6,8 @@ services:
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
       - ./configs/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      - ELASTIC_PASSWORD=elastic
 
   kibana:
     image: docker.elastic.co/kibana/kibana:${ELK_VERSION}
